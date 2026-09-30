@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "https://apihometurf.localpro1.net/api";
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const Login = () => {
   const navigate = useNavigate();
