@@ -506,7 +506,7 @@ const Dashboard = () => {
                         sm:ml-2.5
                       "
                     >
-                      HomeTurf
+                      Local Pro1
                     </span>
                   </h1>
 

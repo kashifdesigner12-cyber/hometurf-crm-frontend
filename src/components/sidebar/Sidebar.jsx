@@ -146,22 +146,35 @@ const Sidebar = () => {
         } lg:translate-x-0`}
       >
         {/* Sidebar Header */}
-        <div className="relative flex h-20 shrink-0 items-center justify-between overflow-hidden px-5 sm:px-6">
-          <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-white/10 blur-xl" />
+        <div className="relative flex h-24 shrink-0 items-center overflow-hidden border-b border-white/10 px-5 sm:px-6">
+          {/* Decorative Background */}
+          <div className="pointer-events-none absolute -right-8 -top-10 h-28 w-28 rounded-full bg-white/10 blur-2xl" />
+          <div className="pointer-events-none absolute -bottom-12 left-10 h-24 w-24 rounded-full bg-indigo-300/10 blur-2xl" />
 
-          <div className="relative z-10 flex min-w-0 items-center gap-2">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-amber-300 to-yellow-400 font-extrabold text-purple-950 shadow-md">
-              HT
+          <div className="relative z-10 flex min-w-0 items-center gap-3">
+            {/* Professional Logo */}
+            <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white shadow-lg">
+              <div className="absolute inset-[3px] flex items-center justify-center rounded-[9px] bg-gradient-to-br from-[#6D5DD3] to-[#4F46A5]">
+                <span className="text-sm font-black tracking-tight text-white">
+                  LP
+                </span>
+              </div>
             </div>
 
+            {/* Brand */}
             <div className="min-w-0">
-              <h1 className="truncate text-lg font-extrabold tracking-tight text-white drop-shadow-sm">
-                HomeTurf
+              <h1 className="truncate text-[17px] font-extrabold tracking-tight text-white">
+                Local Pro1
+                <span className="ml-1 text-indigo-200">CRM</span>
               </h1>
 
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-purple-200 opacity-80">
-                CRM Platform
-              </p>
+              <div className="mt-0.5 flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
+
+                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-purple-200/80">
+                  Business Management
+                </p>
+              </div>
             </div>
           </div>
 
@@ -169,7 +182,7 @@ const Sidebar = () => {
           <button
             type="button"
             onClick={closeSidebar}
-            className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-purple-100 transition hover:bg-white/10 hover:text-white lg:hidden"
+            className="relative z-10 ml-auto flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-purple-100 transition hover:bg-white/10 hover:text-white lg:hidden"
             aria-label="Close menu"
           >
             <X size={21} />
@@ -178,6 +191,12 @@ const Sidebar = () => {
 
         {/* Navigation */}
         <nav className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-4 sm:px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="mb-3 px-2">
+            <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-purple-200/50">
+              Workspace
+            </p>
+          </div>
+
           <div className="space-y-1.5">
             {menuItems.map((item) => {
               const Icon = item.icon;
